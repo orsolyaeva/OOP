@@ -6,4 +6,4 @@ This repo contains a separate directory for each of my OOP homework (fundamental
 
 ***Assignments***
 
- - **Class 1** (Feb 15):  [homework](../tree/main/hazi1/src)
+ - **Class 1** (Feb 15):  [homework](https://github.com/orsolyaeva/OOP/tree/main/hazi1/src)
