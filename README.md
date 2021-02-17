@@ -6,4 +6,4 @@ This repo contains a separate directory for each of my OOP homework (fundamental
 
 ***Assignments***
 
- - **Class 1** (Feb 15):  [homework](main/Homework1/src)
+ - **Class 1** (Feb 15):  [homework](Homework1/src)
