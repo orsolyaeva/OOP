@@ -21,7 +21,7 @@ public class Main {
                 case 9: exercise9(); break; // exercise 5 from "Functions"
                 case 10: exercise10(); break; // exercise 6 from "Functions"
                 case 11: exercise11(); break; // exercise 1 from "Extra exercises"
-                case 12: exercise12(); break;
+                case 12: exercise12(); break; // exercise 2 from "Extra exercises"
                 case 13: System.exit(0); // exits while loop, terminate execution
                 default:
                     System.out.println("Try again!");
@@ -31,6 +31,7 @@ public class Main {
 
     public static void exercise1(){
         System.out.println("Nyitrai Orsi, Nagyenyed, Matematika-Informatika, Bethlen Gabor");
+        System.out.println();
     }
 
 
@@ -41,6 +42,7 @@ public class Main {
             System.out.println(name.charAt(i));
         }
         System.out.println(monogram);
+        System.out.println();
     }
 
 
@@ -52,6 +54,7 @@ public class Main {
             }
             System.out.println();
         }
+        System.out.println();
     }
 
 
@@ -65,12 +68,14 @@ public class Main {
             monogram += word.charAt(0);
         }
         System.out.print(monogram);
+        System.out.printf("\n\n");
     }
 
 
     public static void exercise5(){ // exercise 1 from "Functions"
         double x[] = {7, 1, -3, 45, 9};
         System.out.printf("MAX: %6.2f\n", maxElement(x));
+        System.out.println();
 
 //        double y[] = {};
 //        System.out.printf("MAX: %6.2f\n", maxElement(y));
@@ -97,6 +102,7 @@ public class Main {
         else{
             System.out.printf("The %dth bit of the given number: %d\n", position, bit);
         }
+        System.out.println();
     }
 
 
@@ -105,18 +111,19 @@ public class Main {
         for(int i = 0; i <= 31; i++){
             System.out.printf("%4d %5d\n", i,  countBits(i));
         }
+        System.out.println();
     }
 
 
     public static void exercise8(){ // exercise 4 from "Functions"
         double x[] = {7.5, 1.4, -3, 45.3, 9};
-        System.out.printf("The average of the array is: %.2f\n", mean(x));
+        System.out.printf("The average of the array is: %.2f\n\n", mean(x));
     }
 
 
     public static void exercise9(){ // exercise 5 from "Functions"
         double x[] = {1, 4, 7, 2, 6};
-        System.out.printf("Standard deviation = %.2f", stddev(x));
+        System.out.printf("Standard deviation = %.2f\n\n", stddev(x));
     }
 
 
@@ -124,12 +131,14 @@ public class Main {
         double x[] = {7.5, 1.4, -3, 45.3, 9, 45.3, 22.1};
         double max[] = maximum(x);
 
-        System.out.printf("The two largest numbers in the array: %.2f and %.2f.", max[0], max[1]);
+        System.out.printf("The two largest numbers in the array: %.2f and %.2f.\n\n", max[0], max[1]);
     }
 
     public static void exercise11(){ // exercise 1 from "Extra exercises"
         int array[] = createArray();
+        System.out.print("The random array: ");
         print(array);
+        System.out.print("The sorted array: ");
         Arrays.sort(array);
         print(array);
 
@@ -141,7 +150,7 @@ public class Main {
     public static void exercise12(){
         int array[] = fillArray();
 
-        // I won't deal with the case when the element is not present in the array because I know that it will contain every element
+        // Measuring the elapsed time using the implemented binary search
         int result;
         double start = System.nanoTime();
         for(int i = 0; i < array.length; i++){
@@ -150,6 +159,7 @@ public class Main {
         double finish = System.nanoTime();
         double timeImpBinSearch = finish - start;
 
+        // Measuring the elapsed time using the built-in binary search
         start = System.nanoTime();
         for(int i = 0; i < array.length; i++){
             Arrays.binarySearch(array, i);
@@ -157,8 +167,8 @@ public class Main {
         finish = System.nanoTime();
         double timeBuiltInBinSearch = finish - start;
 
-        System.out.printf("Time elapsed using the implemented binary search: %5.10f milliseconds\n", timeImpBinSearch / 1000000);
-        System.out.printf("Time elapsed using the built in binary search: %5.10f milliseconds\n", timeBuiltInBinSearch / 1000000);
+        System.out.printf("Time elapsed using the implemented binary search: %5.10f ms\n", timeImpBinSearch / 1000000);
+        System.out.printf("Time elapsed using the built in binary search: %5.10f ms\n\n", timeBuiltInBinSearch / 1000000);
     }
 
     public static double maxElement(double array[]) {
@@ -285,10 +295,12 @@ public class Main {
     }
 
     public static int countDouble(int array[]){
-        int doubleNr = 0;
+        int doubleNr = 0; // variable to count the number of elements that appear two times
+
         for(int i = 0; i < array.length - 2; i++){
+            // if the current number is only equal with the next one, and it's different from the previous one
             if(array[i] == array[i + 1] && array[i] != array[i + 2] && array[i - 1] != array[i]){
-                doubleNr += 1;
+                doubleNr += 1; // increment the counter
             }
         }
 
@@ -310,7 +322,7 @@ public class Main {
         if (right >= left) {
             int middle = left + (right - left) / 2;
 
-            if (array[middle] == number) // if the number is in the middle of the array return position
+            if (array[middle] == number) // if the number is in the middle of the array return it's position
                 return middle;
 
             // if the number is smaller than the middle-element continue the search in the first half
