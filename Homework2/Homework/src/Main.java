@@ -4,21 +4,20 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        exercise3();
-//        Scanner in = new Scanner(System.in); // using Scanner for getting input from the User
-//        while(true){
-//            System.out.print("Enter the number of the exercise (to exit enter 13): ");
-//            int exercise = in.nextInt();
-//            switch (exercise){
-//                case 1: exercise1(); break;
-//                case 2: exercise2();
-//                case 3: exercise3();
-//                case 4: exercise4(); // the Extra exercise
-//                case 5: System.exit(0); // exits while loop, terminate execution
-//                default:
-//                    System.out.println("Try again!");
-//            }
-//        }
+        Scanner in = new Scanner(System.in); // using Scanner for getting input from the User
+        while(true){
+            System.out.print("Enter the number of the exercise (to exit enter 4): ");
+            int exercise = in.nextInt();
+            switch (exercise){
+                case 1: exercise1(); break;
+                case 2: exercise2(); break;
+                case 3: exercise3(); break;
+                case 4: System.exit(0); // exits while loop, terminate execution
+                default:
+                    System.out.println("Try again!");
+                    break;
+            }
+        }
     }
 
     public static void exercise1(){
@@ -48,6 +47,7 @@ public class Main {
         System.out.println("Deposit 2000 EUR.");
         account2.deposit(2000);
         System.out.println(account2.getAccountNumber() + ":" + account2.getBalance());
+        System.out.println();
     }
 
     public static void exercise2(){
@@ -68,6 +68,7 @@ public class Main {
         }
 
         System.out.format("\n%-15s%-15s%-15s%-15s%.2f\n", "", "", "", "Total area  =", totalArea);
+        System.out.println();
     }
 
     public static void exercise3(){
@@ -89,6 +90,7 @@ public class Main {
             }
         }
         System.out.println("Number of invalid dates: " + countInvalidDate);
+        System.out.println();
     }
 }
 

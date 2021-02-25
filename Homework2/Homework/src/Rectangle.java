@@ -2,11 +2,10 @@ public class Rectangle {
     private double length, width;
 
     public Rectangle(double length, double width){
-        if(length <= 0 || width <= 0){
-            return;
+        if(length > 0 && width > 0){
+            this.length = length;
+            this.width = width;
         }
-        this.length = length;
-        this.width = width;
     }
 
     public double perimeter(){

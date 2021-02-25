@@ -17,10 +17,9 @@ public class BankAccount {
     }
 
     public void deposit(double amount){
-        if(amount <= 0){
-            return;
+        if(amount > 0){
+            balance += amount;
         }
-        balance += amount;
     }
 
     public boolean withdraw(double amount){
