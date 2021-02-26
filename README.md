@@ -7,3 +7,4 @@ This repo contains a separate directory for each of my OOP homework (fundamental
 ***Assignments***
 
  - **Class 1** (Feb 15):  [homework](Homework1/src)
+ - **Class 2** (Feb 22):  [homework](Homework2)
