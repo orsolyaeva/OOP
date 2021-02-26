@@ -1,10 +1,4 @@
 3
-Ford
-Fiesta 
-2017
-Volkswagen
-Polo 
-2002
-Nissan
-Navara 
-2021
+Renault, Talisman, 2021
+Volkswagen, Polo, 2017
+Bentley, Continental, 2016
