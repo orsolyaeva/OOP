@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         // read the attributes of the car from a file (brand, type and year of manufacture)
         Random rand = new Random();
-        File file = new File("input.txt");
+        File file = new File("Homework2/input.txt");
         Scanner scanner = new Scanner(file);
         int numberCars = Integer.parseInt(scanner.nextLine()); // number of cars in the file
         int i = 0;
