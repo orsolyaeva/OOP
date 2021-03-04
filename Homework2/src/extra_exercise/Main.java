@@ -68,10 +68,12 @@ public class Main {
                     cars.get(i).getCarType() + " has traveled " + cars.get(i).getNumberOfKilometers() +
                     " kilometers and reached the speed of " + cars.get(i).getSpeed() + "km/h.");
 
+            // count the number of Diesel cars
             if(cars.get(i).getFuel() == FuelType.valueOf("DIESEL")){
                 countDiesel += 1;
             }
 
+            // count the number of red cars
             if(cars.get(i).getColor() == Color.valueOf("RED")){
                 countRedCars += 1;
             }
