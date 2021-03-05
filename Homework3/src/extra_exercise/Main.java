@@ -71,7 +71,7 @@ public class Main {
             line = scanner.nextLine();
             try{
                 StringTokenizer tokens = new StringTokenizer(line, ",");
-                // Student reference to store the information about a student
+                // store the information about a student
                 Student student = new Student(tokens.nextToken(), tokens.nextToken(), tokens.nextToken(), Major.valueOf(tokens.nextToken()));
                 if(scanner.hasNextLine()){
                     line = scanner.nextLine();
