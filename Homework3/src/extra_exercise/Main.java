@@ -111,9 +111,8 @@ public class Main {
         // count the number of courses which are held on a given day
         System.out.println(nrOfCoursesByDay(DayOfWeek.MONDAY));
 
-        cancelEnrollments("Homework3/cancellation.csv");
-
         // cancel the enrollment of a student from all courses
+        cancelEnrollments("Homework3/cancellation.csv");
         for(Course course:courses){
             System.out.println(course);
         }
