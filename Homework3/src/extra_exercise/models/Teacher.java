@@ -7,7 +7,7 @@ public class Teacher {
     private String lastName, firstName;
     private int teacherID;
     Degree degree;
-    Department department;
+    Department department; // each teacher belong to a specific department
     public static int currentNumberOfTeachers = 0;
 
     public Degree getDegree() {

@@ -6,19 +6,10 @@ import java.util.Arrays;
 public class Course {
     private String courseID;
     private int numberOfCredits, numberOfEnrolledStudents = 0;
-    Teacher teacher;
-    DayOfWeek dayOfCourse;
-    public static int MAX_STUDENTS = 120;
-    Student[] enrolledStudents = new Student[MAX_STUDENTS];
-
-    public void cancelEnrollment(String studentID){
-        for(int i = 0; i < numberOfEnrolledStudents; i++){
-            if(enrolledStudents[i].getNeptunCode().equals(studentID)){
-                System.arraycopy(enrolledStudents, i + 1, enrolledStudents, i, enrolledStudents.length - i - 1);
-                numberOfEnrolledStudents -= 1;
-            }
-        }
-    }
+    Teacher teacher; // assigning one teacher to each class
+    DayOfWeek dayOfCourse; // the day of the week when the course occurs
+    public static int MAX_STUDENTS = 120; // maximum number of student in a course
+    Student[] enrolledStudents = new Student[MAX_STUDENTS]; // the list of enrolled student to a course
 
     public DayOfWeek getDayOfCourse() {
         return dayOfCourse;
@@ -44,6 +35,17 @@ public class Course {
         this.teacher = teacher;
     }
 
+    // method to cancel the enrollment of a student
+    public void cancelEnrollment(String studentID){
+        for(int i = 0; i < numberOfEnrolledStudents; i++){
+            if(enrolledStudents[i].getNeptunCode().equals(studentID)){
+                System.arraycopy(enrolledStudents, i + 1, enrolledStudents, i, enrolledStudents.length - i - 1);
+                numberOfEnrolledStudents -= 1;
+            }
+        }
+    }
+
+    // method to enroll a student
     public void enrollStudent(Student student) {
         if (numberOfEnrolledStudents < MAX_STUDENTS && student != null) {
             enrolledStudents[numberOfEnrolledStudents] = student;
@@ -70,6 +72,4 @@ public class Course {
         }
         return strBuilder.toString();
     }
-
-
 }

@@ -1,11 +1,10 @@
 package extra_exercise.models;
 
-
 import extra_exercise.enums.Major;
 
 public class Student {
     private String neptunCode, firstName, lastName;
-    Major major;
+    Major major; // each student belong to a particular major
 
     public String getNeptunCode() {
         return neptunCode;
