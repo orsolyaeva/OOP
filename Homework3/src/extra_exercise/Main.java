@@ -152,9 +152,15 @@ public class Main {
         Scanner scanner = new Scanner(file);
         String line;
         while(scanner.hasNextLine()) {
-            line = scanner.nextLine();
-            for(int i = 0; i < numberCourses; i++){
-                courses[i].cancelEnrollment(line);
+            try {
+                line = scanner.nextLine();
+                for (int i = 0; i < numberCourses; i++) {
+                    courses[i].cancelEnrollment(line);
+                }
+            }
+            catch (Exception e){
+                System.out.println(e);
+                System.out.println("An error occurred whilst cancelling a student's enrollment.");
             }
         }
     }
