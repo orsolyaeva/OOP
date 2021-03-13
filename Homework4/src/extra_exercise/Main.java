@@ -18,7 +18,9 @@ public class Main {
     private static final ArrayList<Course> courses = new ArrayList<>();
 
     public static void main(String[] args){
+        // initializing the Degree, Deparmtent and Major classes with the values from the previous exercise (lab 3)
         initializeUtils();
+
         Student student1 = new Student("AVLMO7", "Anne", "Bell", "Dentistry");
         Student student2 = new Student("HGC54", "David", "Hill", "Biochemistry");
         Student student3 = new Student("ARFG7", "Peter", "Porto","Accounting");
@@ -31,7 +33,6 @@ public class Main {
         Course course1 = new Course("MB_INFO20", 5, DayOfWeek.FRIDAY);
 
         course1.setTeacher(teacher1);
-
         course1.enrollStudent(student1);
         course1.enrollStudent(student2);
         course1.enrollStudent(student3);
@@ -40,24 +41,28 @@ public class Main {
 
         System.out.println(course1);
 
+        // read information about university courses
         readUniversity("Homework4/university.csv");
+
+        // enroll students to specific courses
         readStudentsEnrollment("Homework4/students.csv");
 
+        // print all student with a specific major enrolled to a course
         enrolledStudentsByMajor(Major.valueOf("MANUFACTURING_ENGINEERING"), "KL737");
 
+        // print an array containing all courses which are held by a teacher with a given degree
         System.out.println(coursesByTeacherDegree(Degree.valueOf("ADJUNCT")));
 
+        // print the number of courses held on a given day
         System.out.println(nrOfCoursesByDay(DayOfWeek.MONDAY));
 
+        // cancel enrollments of given student
         cancelEnrollments("Homework4/cancellation.csv");
 
+        // print all courses
         for(Course course : courses){
             System.out.println(course);
         }
-
-        System.out.println(Major.values());
-        System.out.println(Degree.values());
-        System.out.println(Department.values());
     }
 
     // method to initialize the Degree, Department and Major ArrayLists
@@ -97,6 +102,7 @@ public class Main {
         }
     }
 
+    // method to read the enrolled student from a CSV file
     public static void readStudentsEnrollment(String fileName){
         Scanner scanner = null;
         try{

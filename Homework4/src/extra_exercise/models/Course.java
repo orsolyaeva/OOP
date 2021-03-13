@@ -26,6 +26,10 @@ public class Course {
         return enrolledStudents;
     }
 
+    public int numberOfStudents(){
+        return this.enrolledStudents.size();
+    }
+
     public int getNumberOfCredits() {
         return numberOfCredits;
     }
