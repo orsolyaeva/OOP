@@ -21,7 +21,6 @@ public class Student {
         this.major = major;
     }
 
-
     @Override
     public String toString() {
         return firstName + " " + lastName + " (" + neptunCode + ")\n";
