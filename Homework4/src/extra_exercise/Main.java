@@ -170,7 +170,7 @@ public class Main {
         return countDays;
     }
 
-    // method the cancel the enrollment of a student from all courses
+    // method to cancel the enrollment of a student from all courses
     public static void cancelEnrollments(String fileName) {
         Scanner scanner = null;
         try{
