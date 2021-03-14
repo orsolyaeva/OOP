@@ -63,6 +63,10 @@ public class MyArray {
 
     // return the mean of the array
     public double mean(){
+        if(elements.length == 0) {
+            System.out.println("The array is empty!");
+            return Double.NaN;
+        }
         double mean = 0;
         for(double element:elements){
             mean += element;
@@ -72,6 +76,10 @@ public class MyArray {
 
     // return the standard deviation of the array
     public double stddev(){
+        if(elements.length == 0){
+            System.out.println("The array is empty!");
+            return -1; // if the given array is empty return a negative number, because the minimum possible standard deviation is zero
+        }
         double stdDev = 0;
         double mean = mean();
 
