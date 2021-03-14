@@ -102,7 +102,7 @@ public class Main {
         }
     }
 
-    // method to read the enrolled student from a CSV file
+    // method to read the enrolled students from a CSV file
     public static void readStudentsEnrollment(String fileName){
         Scanner scanner = null;
         try{
