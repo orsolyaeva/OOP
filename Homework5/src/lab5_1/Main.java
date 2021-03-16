@@ -5,22 +5,6 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args){
-       ArrayList<BankAccount> bankAccounts = new ArrayList<>();
-       for(int i = 0; i < 150; i++){
-           bankAccounts.add(new BankAccount());
-       }
-
-       ArrayList<Customer> customers = new ArrayList<>();
-       customers.add(new Customer("John", "Black"));
-       customers.add(new Customer("Steve", "Brown"));
-       customers.add(new Customer("Mary", "White"));
-
-       for(int i = 0; i < customers.size(); i++){
-           customers.get(customers.size()-1).addAccount(new BankAccount());
-       }
-
-       System.out.println(customers);
-
        Bank bank = new Bank("OTP");
 
        Customer customer1 = new Customer("Peter", "Hill");
@@ -45,6 +29,6 @@ public class Main {
 
         System.out.println(bank.getCustomers(2).toString());
 
-        bank.printCustomersToFile("bank_customers_csv");
+        bank.printCustomersToFile("bank_customers.csv");
     }
 }
