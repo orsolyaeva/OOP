@@ -1,5 +1,7 @@
 package extra_exercise.utils;
 
+import java.util.PropertyPermission;
+
 public class Enums {
     public enum Seriosity{
         GREEN, YELLOW, RED
@@ -30,6 +32,10 @@ public class Enums {
 
         private String value;
 
+        public String getValue() {
+            return value;
+        }
+
         private CatBreed(String value){
             this.value = value;
         }
@@ -49,6 +55,10 @@ public class Enums {
         LabradorRetrievers, GermanShepherds, GoldenRetrievers, FrenchBulldogs, Bulldogs, Beagles, Poodles;
 
         private String value;
+
+        public String getValue() {
+            return value;
+        }
 
         private DogBreed(String value) {
             this.value = value;

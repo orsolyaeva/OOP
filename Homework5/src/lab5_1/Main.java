@@ -29,6 +29,6 @@ public class Main {
 
         System.out.println(bank.getCustomers(2).toString());
 
-        bank.printCustomersToFile("bank_customers.csv");
+        bank.printCustomersToFile("Homework5/bank_customers.csv");
     }
 }
