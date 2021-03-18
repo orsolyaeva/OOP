@@ -1,0 +1,5 @@
+1 apple 5 10
+2 chocolate 7 10
+3 milk 6 12
+4 pen 3 11
+5 juice 10 15
