@@ -42,6 +42,6 @@ public class MyDate {
 
     // returns the date object in a textual format
     public String toString(){
-        return "Mydate: " + this.year + "-" + this.month + "-" + this.day;
+        return this.year + "-" + String.format("%02d", this.month) + "-" + String.format("%02d", this.day);
     }
 }

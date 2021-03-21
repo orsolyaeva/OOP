@@ -28,7 +28,10 @@ public class Enums {
     }
 
     public enum CatBreed{
-        Polydactyl, Snowshoe, Calico, BritishShortHair, Siamese, JapaneseBobtail, Persian, ScottishFold, GrayTabby;
+        Polydactyl("Polydactyl"), Snowshoe("Snowshoe"), Calico("Calico"),
+        BritishShortHair("British Shorthaired"), Siamese("Siamese"),
+        JapaneseBobtail("Japanese Bobtail"), Persian("Persian"), ScottishFold("Japanese Bobtail"),
+        GrayTabby("Gray abby");
 
         private String value;
 
@@ -45,14 +48,14 @@ public class Enums {
 
         @Override
         public String toString() {
-            return "CatBreed{" +
-                    "value='" + value + '\'' +
-                    '}';
+            return value;
         }
     }
 
     public enum DogBreed{
-        LabradorRetrievers, GermanShepherds, GoldenRetrievers, FrenchBulldogs, Bulldogs, Beagles, Poodles;
+        LabradorRetrievers("Labrador Retrievers"), GermanShepherds("German Shepherds"),
+        GoldenRetrievers("Golden Retrievers"), FrenchBulldogs("French Bulldogs"),
+        Bulldogs("Bulldogs"), Beagles("Beagles"), Poodles("Poodles");
 
         private String value;
 
@@ -69,9 +72,7 @@ public class Enums {
 
         @Override
         public String toString() {
-            return "DogBreed{" +
-                    "value='" + value + '\'' +
-                    '}';
+            return value;
         }
     }
 }
