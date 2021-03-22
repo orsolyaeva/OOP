@@ -6,9 +6,9 @@ import extra_exercise.utils.Enums;
 import java.util.Random;
 
 public abstract class Person {
-    protected String personId;
-    protected Enums.Gender gender;
-    protected MyDate dateOfBirth;
+    protected final String personId;
+    protected final Enums.Gender gender;
+    protected final MyDate dateOfBirth;
     protected String lastName, firstName, fullName, contact;
 
 

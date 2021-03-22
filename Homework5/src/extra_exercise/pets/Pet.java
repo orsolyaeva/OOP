@@ -39,9 +39,16 @@ public abstract class Pet implements IPatient {
             System.out.println(this.petName + " is healthy.");
         }
         else{
-            System.out.println(this.petName + " is suffering from the following diseases:\n");
+            System.out.print(this.petName + " is suffering from the following ");
+            if(diseases.size() == 1){
+                System.out.println("disease:");
+            }
+            else{
+                System.out.println("diseases:");
+            }
+
             for(String disease: diseases){
-                System.out.print("\t-" + disease);
+                System.out.print("\t- " + disease);
             }
         }
     }
@@ -94,6 +101,12 @@ public abstract class Pet implements IPatient {
     @Override
     public String getDiseases()
     {
-        return diseases.toString();
+        StringBuilder string = new StringBuilder();
+
+        for(String disease: diseases){
+            string.append(Util.treatmentsByDiseaseType(disease));
+        }
+
+        return string.toString();
     }
 }

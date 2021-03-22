@@ -22,10 +22,11 @@ public class Util {
         while(scanner.hasNextLine()){
             String line = scanner.nextLine();
             tokens = new StringTokenizer(line, ",");
-            Disease temp = new Disease(Enums.PetType.valueOf(tokens.nextToken()), tokens.nextToken());
+            Disease temp = new Disease(Enums.PetType.valueOf(tokens.nextToken()),
+                    tokens.nextToken().trim().replaceAll("\\s+", " "));
             List<String> treats = new ArrayList<>();
             while(tokens.hasMoreTokens()){
-                treats.add(tokens.nextToken());
+                treats.add(tokens.nextToken().trim().replaceAll("\\s+", " "));
             }
             temp.addTreatments(treats);
             diseases.add(temp);
@@ -33,9 +34,10 @@ public class Util {
     }
 
     public static void printAllDiseasesByPetType(Enums.PetType petType){
+        System.out.println("All diseases in case of " + petType);
         for (Disease disease : diseases){
             if(disease.getPetType().equals(petType)){
-                System.out.println(disease.getDisease());
+                System.out.println(treatmentsByDiseaseType(disease.getDisease()));
             }
         }
     }
@@ -73,23 +75,28 @@ public class Util {
             System.exit(1);
         }
 
-        StringTokenizer tokens;
         while(scanner.hasNextLine()){
             commonWords.add(scanner.nextLine());
         }
     }
 
     public static String getRandomNumber(int number){
-        StringBuilder randomNumber = new StringBuilder();
-        randomNumber.append(random.nextInt(number) + 1);
-        return randomNumber.toString();
+        return String.valueOf(random.nextInt(number) + 1);
     }
 
     public static String treatmentsByDiseaseType(String diseaseType){
         StringBuilder treatments = new StringBuilder();
         for(Disease disease:diseases){
             if(disease.getDisease().equals(diseaseType)){
-                treatments.append(disease.treatments);
+                treatments.append("\t~ Treatments for " + disease.getDisease());
+                if(!disease.getDisease().matches(".*\\bDisease\\b.*")){
+                    treatments.append(" disease");
+                }
+                treatments.append(":\n");
+                for(String treatment: disease.treatments){
+                    treatments.append("\t\t- " + treatment + "\n");
+                }
+                break;
             }
         }
         return treatments.toString();

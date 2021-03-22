@@ -18,15 +18,15 @@ public class Owner extends Person{
         this.pets.addAll(Arrays.asList(pets));
     }
 
-    public String getPet(String petName){
+    public Pet getPet(String petName){
         if(this.pets.size() != 0){
             for(Pet pet:pets){
                 if(pet.getPetName().equals(petName)){
-                    return pet.toString();
+                    return pet;
                 }
             }
         }
-        return "The owner has no pet named " + petName;
+        return null;
     }
 
     public String noiseInOwnersHouse(){
