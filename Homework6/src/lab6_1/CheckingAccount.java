@@ -20,7 +20,14 @@ public class CheckingAccount extends BankAccount{
         if(amount > balance + overdraftLimit){
             return false;
         }
-        balance -= amount;
+
+        if(amount > this.balance){
+            this.overdraftLimit -= amount - this.balance;
+            this.balance = 0;
+        }
+        else{
+            this.balance -= amount;
+        }
         return true;
     }
 

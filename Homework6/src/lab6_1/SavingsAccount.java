@@ -21,6 +21,6 @@ public class SavingsAccount extends BankAccount{
 
     @Override
     public String toString() {
-        return "SavingsAccount:\n\t\t- interestRate = " + this.interestRate + "\n\t\t- accountNumber: " + accountNumber;
+        return "SavingsAccount:\n\t\t- balance: " + this.balance + "\n\t\t- interestRate = " + this.interestRate + "\n\t\t- accountNumber: " + accountNumber;
     }
 }

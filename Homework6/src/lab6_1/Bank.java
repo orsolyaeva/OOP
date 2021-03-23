@@ -24,7 +24,7 @@ public class Bank {
 
     // prints the customers to a stream
     private void printCustomer(PrintStream ps){
-        ps.println("ID, FirstName, Last Name, Number of bank account");
+//        ps.println("ID, FirstName, Last Name, Number of bank account");
         for(Customer customer: customers){
             ps.println(customer.getId()+ ", " + customer.getFirstName() + " " + customer.getLastName());
                 for(String accountNumber: customer.getAccountNumbers()){
