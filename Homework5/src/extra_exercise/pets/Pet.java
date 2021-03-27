@@ -35,6 +35,7 @@ public abstract class Pet implements IPatient {
     }
 
     public void checkHealthStatus(){
+        System.out.println();
         if(isHealthy()){
             System.out.println(this.petName + " is healthy.");
         }
@@ -51,6 +52,7 @@ public abstract class Pet implements IPatient {
                 System.out.print("\t- " + disease);
             }
         }
+        System.out.println();
     }
 
     public void healing(){

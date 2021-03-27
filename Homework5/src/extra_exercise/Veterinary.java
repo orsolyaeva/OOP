@@ -38,6 +38,11 @@ public class Veterinary implements IMedicalCenter {
         return veterinaryId;
     }
 
+    public ArrayList<IDoctor> getDoctors(){
+        ArrayList<IDoctor> doctors1 = this.doctors;
+        return doctors1;
+    }
+
     @Override
     public void hireDoctor(IDoctor doctor) {
         this.doctors.add(doctor);
@@ -45,11 +50,7 @@ public class Veterinary implements IMedicalCenter {
 
     @Override
     public void fireDoctor(IDoctor doctor) {
-        for(IDoctor doctor1:doctors){
-            if(doctor1.equals(doctor)){
-                this.doctors.remove(doctor1);
-            }
-        }
+        doctors.removeIf(doctor1 -> doctor1.equals(doctor));
     }
 
     @Override
@@ -81,12 +82,17 @@ public class Veterinary implements IMedicalCenter {
     @Override
     public int getNumberOfFreeAppointmentsByPatient(IPatient patient) {
         int numberAppointments = 0;
+        System.out.println("\nVeterinary " + this.name.toUpperCase() + ":");
         ArrayList<IDoctor> doctorsByPatientType = getDoctorsByPatientType(patient.getPatientType());
         for(IDoctor doctor:doctorsByPatientType){
             if(doctor.isAvailable()){
                 System.out.println(doctor);
                 numberAppointments += Veterinarian.MAX_PATIENTS_PER_DAY - doctor.getNumberCurrentPatients();
             }
+        }
+
+        if(numberAppointments == 0){
+            System.out.println("\tWe are terribly sorry but right now we can not offer any free appointment for your pet!");
         }
         return numberAppointments;
     }

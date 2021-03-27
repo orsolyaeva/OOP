@@ -9,6 +9,10 @@ public class DateUtil {
 
     // the isValid method checks whether its parameters (year, month, day) from a valid date
     public static boolean isValidDate(int year, int month, int day){
+        if(year == 0 || month == 0 || day == 0){
+            return false;
+        }
+
         // if the year, month or day is out of range
         if(year <= 0){
             return false;

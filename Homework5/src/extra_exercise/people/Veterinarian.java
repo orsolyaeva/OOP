@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Veterinarian extends Person implements IDoctor {
-    public static final int MAX_PATIENTS_PER_DAY = new Random().nextInt(20);;
+    public static final int MAX_PATIENTS_PER_DAY = new Random().nextInt(20) + 3;
     private final ArrayList<IPatient> patients = new ArrayList<>();
     private Enums.PetType speciality;
     private final String fullName;
@@ -48,18 +48,23 @@ public class Veterinarian extends Person implements IDoctor {
 
     @Override
     public boolean treatPatient(IPatient patient) {
-        System.out.println("Dr. " + this.fullName + " started to heal your pet...");
+        System.out.println("\nDr. " + this.fullName + " started to heal your pet...");
         System.out.println("Generating required treatment...");
 
         if(patient instanceof Pet){
             ((Pet) patient).healing();
             System.out.println(patient.getDiseases());
-            System.out.println("\nYour pet should recover soon. Take care.");
+            System.out.println("\n" + ((Pet) patient).getPetName() + " should recover soon. Take care.");
             this.patients.set(this.patients.indexOf(patient), null);
             System.out.println("Pet removed from patient list.");
             return true;
         }
         return false;
+    }
+
+    public ArrayList<IPatient> getPatient(){
+        ArrayList<IPatient> patients1 = this.patients;
+        return patients1;
     }
 
     @Override
@@ -92,7 +97,7 @@ public class Veterinarian extends Person implements IDoctor {
             veterinarian.append(" does not have any patients.");
         }
         else{
-            veterinarian.append(" has" + this.getNumberCurrentPatients() + " patients\n");
+            veterinarian.append(" has " + this.getNumberCurrentPatients() + " patients\n");
         }
 
         return veterinarian.toString();

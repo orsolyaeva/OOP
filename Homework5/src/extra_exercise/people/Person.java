@@ -11,7 +11,6 @@ public abstract class Person {
     protected final MyDate dateOfBirth;
     protected String lastName, firstName, fullName, contact;
 
-
     public Person(MyDate dateOfBirth, Enums.Gender gender, String firstName, String lastName, String contact) {
         this.gender = gender;
         this.dateOfBirth = dateOfBirth;
@@ -31,7 +30,7 @@ public abstract class Person {
           personId.append("2");
       }
 
-      personId.append(this.dateOfBirth.getYear() % 100);
+      personId.append(String.format("%02d", this.dateOfBirth.getYear() % 100));
       personId.append(String.format("%02d", this.dateOfBirth.getMonth()));
       personId.append(String.format("%02d", this.dateOfBirth.getDay()));
       personId.append(new Random().nextInt(1000000) + 100000);

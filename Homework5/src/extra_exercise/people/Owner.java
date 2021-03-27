@@ -45,7 +45,7 @@ public class Owner extends Person{
     @Override
     public String toString() {
        StringBuilder owner = new StringBuilder();
-       owner.append(this.fullName + " is an owner\n");
+       owner.append("\n" + this.fullName + " is an owner\n");
        owner.append("\tContact information:\n");
        owner.append("\t\t- Personal ID: " + this.personId + "\n");
        owner.append("\t\t- Date of birth: " + this.dateOfBirth + "\n");

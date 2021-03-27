@@ -31,7 +31,7 @@ public class Enums {
         Polydactyl("Polydactyl"), Snowshoe("Snowshoe"), Calico("Calico"),
         BritishShortHair("British Shorthaired"), Siamese("Siamese"),
         JapaneseBobtail("Japanese Bobtail"), Persian("Persian"), ScottishFold("Japanese Bobtail"),
-        GrayTabby("Gray abby");
+        GrayTabby("Gray tabby");
 
         private String value;
 
