@@ -19,11 +19,15 @@ public class display {
     private static final ArrayList<Pet> pets = new ArrayList<>();
     private static final ArrayList<Veterinarian> doctors = new ArrayList<>();
 
-    public static void selectUserType(){
+    public static void open(){
         initialize();
         initializePatients();
 
-        while(true){
+        selectUserType();
+    }
+
+    public static void selectUserType() {
+        while (true) {
             System.out.println("\nHOME");
             System.out.println("1. Owner");
             System.out.println("2. Veterinarian");
@@ -42,14 +46,14 @@ public class display {
         }
     }
 
-    public static void ownerInterface(){
+    public static void ownerInterface() {
         Owner myAccount = ownerSignUp();
         System.out.println("\nYou successfully signed up as an owner named " + myAccount.getFullName() + "!\n");
 
         ownerActions(myAccount);
     }
 
-    public static void veterinarianInterface(){
+    public static void veterinarianInterface() {
         Veterinarian myAccount = veterinarianSignUp();
         doctors.add(myAccount);
         System.out.println("\nYou successfully signed up as a veterinarian named " + myAccount.getFullName() + "!\n");
@@ -57,7 +61,7 @@ public class display {
         veterinarianActions(myAccount);
     }
 
-    public static void veterinaryInterface(){
+    public static void veterinaryInterface() {
         Veterinary myAccount = veterinarySignUp();
         veterinaries.add(myAccount);
 
@@ -66,7 +70,7 @@ public class display {
         veterinaryActions(myAccount);
     }
 
-    public static Veterinarian veterinarianSignUp(){
+    public static Veterinarian veterinarianSignUp() {
         System.out.println("\nSign up as a Veterinarian:");
 
         System.out.print("\tDate of birth (yyyy-mm-dd): ");
@@ -75,13 +79,12 @@ public class display {
         boolean checkDate = false;
         int year = -1, month = -1, day = -1;
 
-        while(!checkDate){
-            if(date.length() < 10 || date.charAt(4) != '-' || date.charAt(7) != '-'){
+        while (!checkDate) {
+            if (date.length() < 10 || date.charAt(4) != '-' || date.charAt(7) != '-') {
                 System.out.println("\t\tERROR! The date of birth field must be entered in YYYY-MM-DD format!");
                 System.out.print("\tDate of birth (yyyy-mm-dd):");
                 date = read.nextLine();
-            }
-            else{
+            } else {
                 checkDate = true;
 
                 StringTokenizer token = new StringTokenizer(date, "-");
@@ -89,7 +92,7 @@ public class display {
                 month = Integer.parseInt(token.nextToken());
                 day = Integer.parseInt(token.nextToken());
 
-                if(!DateUtil.isValidDate(year, month, day)){
+                if (!DateUtil.isValidDate(year, month, day)) {
                     System.out.println("\t\tERROR! Please enter a valid date!");
                     checkDate = false;
 
@@ -118,7 +121,7 @@ public class display {
         return new Veterinarian(new MyDate(year, month, day), gender, firstName, lastName, contact);
     }
 
-    public static Owner ownerSignUp(){
+    public static Owner ownerSignUp() {
         System.out.println("\nSign up as an Owner:");
 
         System.out.print("\tDate of birth (yyyy-mm-dd): ");
@@ -127,13 +130,12 @@ public class display {
         boolean checkDate = false;
         int year = -1, month = -1, day = -1;
 
-        while(!checkDate){
-            if(date.length() < 10 || date.charAt(4) != '-' || date.charAt(7) != '-'){
+        while (!checkDate) {
+            if (date.length() < 10 || date.charAt(4) != '-' || date.charAt(7) != '-') {
                 System.out.println("\t\tERROR! The date of birth field must be entered in YYYY-MM-DD format!");
                 System.out.print("\tDate of birth (yyyy-mm-dd):");
                 date = read.nextLine();
-            }
-            else{
+            } else {
                 checkDate = true;
 
                 StringTokenizer token = new StringTokenizer(date, "-");
@@ -141,7 +143,7 @@ public class display {
                 month = Integer.parseInt(token.nextToken());
                 day = Integer.parseInt(token.nextToken());
 
-                if(!DateUtil.isValidDate(year, month, day)){
+                if (!DateUtil.isValidDate(year, month, day)) {
                     System.out.println("\t\tERROR! Please enter a valid date!");
                     checkDate = false;
 
@@ -183,15 +185,15 @@ public class display {
         return gender;
     }
 
-    public static void buyNewAnimals(Owner owner){
+    public static void buyNewAnimals(Owner owner) {
         System.out.println("\nHurray! Let's get you some new Friends!");
 
         System.out.println("\t1 - Cat\n\t2 - Dog\n\t3 - Turtle\n\t4 - Parrot\n\t5 - Finished shopping");
-        while(true){
+        while (true) {
             System.out.print("\nEnter the number of the pet you would like to buy here: ");
             int pet = read.nextInt();
 
-            switch (pet){
+            switch (pet) {
                 case 1: { // get a cat
                     MyDate date = generateDate();
                     int weight = rand.nextInt(10);
@@ -206,7 +208,7 @@ public class display {
                     System.out.println("Congratulations! You are now the successful owner of " + catName + " the cat!");
                     break;
                 }
-                case 2:{ // get a dog
+                case 2: { // get a dog
                     MyDate date = generateDate();
                     int weight = rand.nextInt(20);
                     boolean goodHouseKeeper = rand.nextBoolean();
@@ -220,7 +222,7 @@ public class display {
                     System.out.println("Congratulations! You are now the successful owner of " + dogName + " the dog!");
                     break;
                 }
-                case 3:{ // get a turtle
+                case 3: { // get a turtle
                     MyDate date = generateDate();
                     int weight = rand.nextInt(10);
                     int hibernatingMonths = rand.nextInt(12);
@@ -254,30 +256,30 @@ public class display {
                             "free to contact us!\n");
                     break;
                 }
-                default:{
+                default: {
                     System.out.println("\tUnfortunately we don't have this kind of pet right now! :(");
                     break;
                 }
             }
 
-            if(pet == 5){
+            if (pet == 5) {
                 ownerActions(owner);
             }
         }
     }
 
-    public static MyDate generateDate(){
-        int year = Integer.parseInt(Util.getRandomNumber(2)) + 2018;
+    public static MyDate generateDate() {
+        int year = Integer.parseInt(Util.getRandomNumber(3)) + 2018;
         int month = Integer.parseInt(Util.getRandomNumber(12)) + 1;
-        int day = Integer.parseInt(Util.getRandomNumber(30)) + 1;
+        int day = Integer.parseInt(Util.getRandomNumber(31)) + 1;
 
-        if(!DateUtil.isValidDate(year, month, day)){
+        if (!DateUtil.isValidDate(year, month, day)) {
             generateDate();
         }
         return new MyDate(year, month, day);
     }
 
-    public static void getFreeAppointments(Owner owner){
+    public static void getFreeAppointments(Owner owner) {
         System.out.print("Enter the name of your sick pet: ");
         read.nextLine();
         String name = read.nextLine();
@@ -287,43 +289,44 @@ public class display {
         owner.getPet(name).checkHealthStatus();
 
         int nrPossibleAppointments = 0;
-        for(Veterinary veterinary:veterinaries){
+        for (Veterinary veterinary : veterinaries) {
             nrPossibleAppointments += veterinary.getNumberOfFreeAppointmentsByPatient(owner.getPet(name));
         }
 
         System.out.println("\nNumber of possible appointments for " + name + " is: " + nrPossibleAppointments);
 
-        if(nrPossibleAppointments != 0){
+        if (nrPossibleAppointments != 0) {
             chooseVeterinary(owner, owner.getPet(name));
-        }
-        else{
+        } else {
             ownerActions(owner);
         }
     }
 
-    public static void chooseVeterinary(Owner owner, Pet sickPet){
+    public static void chooseVeterinary(Owner owner, Pet sickPet) {
         System.out.println("\n\t\tTIME TO HEAL YOUR PET!\n");
         System.out.print("Enter the name of the veterinary you choose: ");
         String veterinaryName = read.nextLine();
 
-        for(Veterinary veterinary:veterinaries){
-            if(veterinary.getName().equals(veterinaryName)){
+        for (Veterinary veterinary : veterinaries) {
+            if (veterinary.getName().equals(veterinaryName)) {
                 veterinary.getNumberOfFreeAppointmentsByPatient(sickPet);
                 chooseDoctor(owner, veterinary, sickPet);
+                break;
             }
         }
     }
 
-    public static void chooseDoctor(Owner owner, Veterinary veterinary, Pet sickPet){
-        System.out.print("Enter the name of the doctor you chose to heal your pet:");
+    public static void chooseDoctor(Owner owner, Veterinary veterinary, Pet sickPet) {
+        System.out.print("Enter the name of the doctor you chose to heal your pet: ");
         String doctorName = read.nextLine();
 
-        for(IDoctor doctor:veterinary.getDoctorsByPatientType(sickPet.getPatientType())){
-            if(doctor instanceof Veterinarian){
-               if(((Veterinarian) doctor).getFullName().equals(doctorName)){
-                   doctor.addNewPatient(sickPet);
-                   doctor.treatPatient(sickPet);
-               }
+        for (IDoctor doctor : veterinary.getDoctorsByPatientType(sickPet.getPatientType())) {
+            if (doctor instanceof Veterinarian) {
+                if (((Veterinarian) doctor).getFullName().equals(doctorName)) {
+                    doctor.addNewPatient(sickPet);
+                    doctor.treatPatient(sickPet);
+                    break;
+                }
             }
         }
 
@@ -331,7 +334,7 @@ public class display {
 
     }
 
-    public static void initialize(){
+    public static void initialize() {
         Util.readDiseasesAndTreatments("Homework5/diseases.csv");
 
         Veterinary medicalCenter = new Veterinary(
@@ -369,7 +372,7 @@ public class display {
         doctors.add(doctor);
     }
 
-    public static void possibleDiseasesOfPet(Owner owner){
+    public static void possibleDiseasesOfPet(Owner owner) {
         System.out.print("\nEnter in which of your pets possible diseases are you interested in:");
         read.nextLine();
         String petName = read.nextLine();
@@ -379,7 +382,7 @@ public class display {
         ownerActions(owner);
     }
 
-    public static void ownerActions(Owner owner){
+    public static void ownerActions(Owner owner) {
         System.out.println("\nActions:\n\t1. Buy new pets\n\t2. Get free appointments\n\t3. My profile" +
                 "\n\t4. Possible diseases of a pet\n\t5. Back to Home");
         System.out.print("Select one from the above actions: ");
@@ -402,7 +405,7 @@ public class display {
 
     }
 
-    public static void initializePatients(){
+    public static void initializePatients() {
         pets.add(new Cat(true, generateDate(), "Joe", rand.nextInt(10)));
         pets.add(new Cat(true, generateDate(), "Pablo", rand.nextInt(10)));
         pets.add(new Cat(false, generateDate(), "Wanda", rand.nextInt(10)));
@@ -420,16 +423,16 @@ public class display {
         pets.add(new Turtle(rand.nextInt(12) + 1, generateDate(), "Fanny", rand.nextInt(10)));
     }
 
-    public static void acceptPatients(Veterinarian veterinarian){
-        for(Pet pet:pets){
+    public static void acceptPatients(Veterinarian veterinarian) {
+        for (Pet pet : pets) {
             pet.unexpectedIllnessOccurred();
-            if(!pet.isHealthy() && veterinarian.getSpeciality().equals(pet.getPatientType())){
+            if (!pet.isHealthy() && veterinarian.getSpeciality().equals(pet.getPatientType())) {
                 veterinarian.addNewPatient(pet);
             }
         }
     }
 
-    public static ArrayList<IPatient> prioritizePatients(Veterinarian veterinarian){
+    public static ArrayList<IPatient> prioritizePatients(Veterinarian veterinarian) {
         ArrayList<IPatient> prioritizePatients = veterinarian.getPatient();
 
         prioritizePatients.removeIf(Objects::isNull);
@@ -439,47 +442,57 @@ public class display {
         return prioritizePatients;
     }
 
-    public static void treatPatient(Veterinarian veterinarian){
+    public static void treatPatient(Veterinarian veterinarian) {
         ArrayList<IPatient> prioritizedPatients = prioritizePatients(veterinarian);
 
         veterinarian.treatPatient(prioritizedPatients.get(0));
     }
 
-    public static void listMedicalCenters(Veterinarian veterinarian){
-        for(Veterinary veterinary:veterinaries){
+    public static void listMedicalCenters(Veterinarian veterinarian) {
+        for (Veterinary veterinary : veterinaries) {
             System.out.println(veterinary.getMedCenterInformation());
         }
 
         System.out.print("\nWould you like to apply for a job? Enter your answer here (yes/no): ");
         String answer = read.next();
-        if(answer.equals("yes")){
+        if (answer.equals("yes")) {
             applyToJob(veterinarian);
-        }
-        else{
+        } else {
             veterinarianActions(veterinarian);
         }
     }
 
-    public static void applyToJob(Veterinarian veterinarian){
+    public static void applyToJob(Veterinarian veterinarian) {
         System.out.print("\nEnter the name of the medical center you want to work in: ");
         read.nextLine();
         String medicalCenter = read.nextLine();
+        boolean accepted = false;
 
-        for(Veterinary veterinary:veterinaries){
-            if(veterinary.getName().equals(medicalCenter)){
+        for (Veterinary veterinary : veterinaries) {
+            if (veterinary.getName().equals(medicalCenter)) {
                 System.out.println("\n\tDear " + veterinarian.getFullName() + "!\nI'd like to inform you that we received your " +
                         "e-mail. We will keep you posted on the status of your application!\n" +
                         "Thank you, again, for taking the time to apply to this role at " + medicalCenter + ".");
                 veterinary.hireDoctor(veterinarian);
+                accepted = true;
+                break;
             }
         }
+
         System.out.println("\n\tafter a few days...");
-        System.out.println("\nCongratulations! This letter is to formally offer you the job you assigned for! " +
-                "Your experience and credentials in the field will be an asset to our team!");
+
+        if(accepted == true){
+            System.out.println("\nCongratulations! This letter is to formally offer you the job you assigned for! " +
+                    "Your experience and credentials in the field will be an asset to our team!");
+        }
+        else{
+            System.out.println("\nWe wanted to let you know that we have chosen to move forward with a different " +
+                    "candidate for the position. We wish you all the best in your job search and future professional endeavors.");
+        }
     }
 
-    public static void veterinarianActions(Veterinarian veterinarian){
-        while(true){
+    public static void veterinarianActions(Veterinarian veterinarian) {
+        while (true) {
             System.out.println("\nActions:\n\t1. Accept patients\n\t2. Treat patients\n\t3. Prioritize patients" +
                     "\n\t4. List medical centers + apply for job\n\t5. My profile\n\t6. Back to Home");
 
@@ -507,7 +520,7 @@ public class display {
         }
     }
 
-    public static Veterinary veterinarySignUp(){
+    public static Veterinary veterinarySignUp() {
         System.out.print("\nSign up as a Veterinary:");
 
         System.out.print("\n\tAddress: ");
@@ -523,26 +536,27 @@ public class display {
         return new Veterinary(address, contact, name);
     }
 
-    public static void acceptPatients(Veterinary veterinary){
-        if(veterinary.getDoctorsByPatientType(Enums.PetType.Dog).size() == 0 &&
+    public static void acceptPatients(Veterinary veterinary) {
+        if (veterinary.getDoctorsByPatientType(Enums.PetType.Dog).size() == 0 &&
                 veterinary.getDoctorsByPatientType(Enums.PetType.Cat).size() == 0 &&
                 veterinary.getDoctorsByPatientType(Enums.PetType.Turtle).size() == 0 &&
-                veterinary.getDoctorsByPatientType(Enums.PetType.Parrot).size() == 0){
+                veterinary.getDoctorsByPatientType(Enums.PetType.Parrot).size() == 0) {
             System.out.println("\nWe are sorry but we have no doctors yet to treat your pets!");
             return;
         }
-        for(Pet pet:pets){
+
+        for (Pet pet : pets) {
             pet.unexpectedIllnessOccurred();
-            if(veterinary.getDoctorsByPatientType(pet.getPatientType()).size() != 0){
-                if(!pet.isHealthy()){
+            if (veterinary.getDoctorsByPatientType(pet.getPatientType()).size() != 0) {
+                if (!pet.isHealthy()) {
                     veterinary.assignPatientToADoctor(pet);
                 }
             }
         }
     }
 
-    public static void hireDoctors(Veterinary veterinary){
-        for(IDoctor doctor:doctors){
+    public static void hireDoctors(Veterinary veterinary) {
+        for (IDoctor doctor : doctors) {
             System.out.println(doctor.toString());
         }
 
@@ -553,9 +567,9 @@ public class display {
 
         System.out.println("Sending e-mail...");
         System.out.println("Waiting for answer...");
-        for(IDoctor doctor:doctors){
-            if(doctor instanceof Person){
-                if(((Person) doctor).getFullName().equals(doctorName)){
+        for (IDoctor doctor : doctors) {
+            if (doctor instanceof Person) {
+                if (((Person) doctor).getFullName().equals(doctorName)) {
                     found = true;
                     veterinary.hireDoctor(doctor);
                     System.out.println("\nWe successfully hired Dr. " + doctorName + "!");
@@ -564,15 +578,15 @@ public class display {
             }
         }
 
-        if(!found){
+        if (!found) {
             System.out.println("No doctor named " + doctorName + " was found!");
         }
     }
 
-    public static void fireDoctors(Veterinary veterinary){
+    public static void fireDoctors(Veterinary veterinary) {
         ArrayList<IDoctor> doctorArrayList = veterinary.getDoctors();
 
-        for(IDoctor doctor:doctorArrayList){
+        for (IDoctor doctor : doctorArrayList) {
             System.out.println(doctor.toString());
         }
 
@@ -581,9 +595,9 @@ public class display {
         String doctorName = read.nextLine();
         boolean found = false;
 
-        for(IDoctor doctor:doctorArrayList){
-            if(doctor instanceof Person){
-                if(((Person) doctor).getFullName().equals(doctorName)){
+        for (IDoctor doctor : doctorArrayList) {
+            if (doctor instanceof Person) {
+                if (((Person) doctor).getFullName().equals(doctorName)) {
                     veterinary.fireDoctor(doctor);
                     found = true;
                     System.out.println("\nDr. " + doctorName + " was successfully fired!");
@@ -592,70 +606,77 @@ public class display {
             }
         }
 
-        if(!found){
+        if (!found) {
             System.out.println("\nNo doctor named " + doctorName + " was found!");
         }
     }
 
-    public static void listPatients(Veterinary veterinary){
+    public static void listPatients(Veterinary veterinary) {
         ArrayList<IDoctor> doctors1 = veterinary.getDoctors();
 
-        if(veterinary.getDoctors().size() == 0){
+        if (veterinary.getDoctors().size() == 0) {
             System.out.println("We have no patients yet!");
             return;
         }
 
-        for(IDoctor doctor:doctors1){
-            if(doctor instanceof Veterinarian){
-                for(IPatient patient : ((Veterinarian) doctor).getPatient()){
+        for (IDoctor doctor : doctors1) {
+            if (doctor instanceof Veterinarian) {
+                for (IPatient patient : ((Veterinarian) doctor).getPatient()) {
                     System.out.println("\t" + patient.toString());
                 }
             }
         }
     }
 
-    public static void listDoctors(Veterinary veterinary){
+    public static void listDoctors(Veterinary veterinary) {
         ArrayList<IDoctor> doctors1 = veterinary.getDoctors();
 
-        if(veterinary.getDoctors().size() == 0){
+        if (veterinary.getDoctors().size() == 0) {
             System.out.println("We have no doctors yet!");
             return;
         }
 
-        for(IDoctor doctor:doctors1){
+        for (IDoctor doctor : doctors1) {
             System.out.println("\t" + doctor.toString());
         }
     }
 
-    public static void veterinaryActions(Veterinary veterinary){
-        while(true){
+    public static void veterinaryActions(Veterinary veterinary) {
+        while (true) {
             System.out.println("\nActions:\n\t1. Accept patience\n\t2. Hire doctors\n\t3. Fire doctors" +
                     "\n\t4. List patients\n\t5. List doctors\n\t6. My profile\n\t7. Back to Home");
             System.out.print("Select one from the above actions: ");
             int action = read.nextInt();
 
-            switch (action){
-                case 1: acceptPatients(veterinary); break;
-                case 2: hireDoctors(veterinary); break;
-                case 3: fireDoctors(veterinary); break;
-                case 4:{
+            switch (action) {
+                case 1:
+                    acceptPatients(veterinary);
+                    break;
+                case 2:
+                    hireDoctors(veterinary);
+                    break;
+                case 3:
+                    fireDoctors(veterinary);
+                    break;
+                case 4: {
                     System.out.println("\nPatients: ");
                     listPatients(veterinary);
                     break;
                 }
-                case 5:{
+                case 5: {
                     System.out.println("\nDoctors:");
                     listDoctors(veterinary);
                     break;
                 }
-                case 6:{
+                case 6: {
                     System.out.println("\n" + veterinary);
                     break;
                 }
-                case 7:{
+                case 7: {
+                    System.out.println("\nYou successfully logged out from your account!");
                     selectUserType();
                 }
-                default:{
+                default: {
                     System.out.println("Something went wrong...Please try again!");
                     break;
                 }

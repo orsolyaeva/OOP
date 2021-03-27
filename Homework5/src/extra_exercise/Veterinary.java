@@ -82,7 +82,7 @@ public class Veterinary implements IMedicalCenter {
     @Override
     public int getNumberOfFreeAppointmentsByPatient(IPatient patient) {
         int numberAppointments = 0;
-        System.out.println("\nVeterinary " + this.name.toUpperCase() + ":");
+        System.out.println("\nVeterinary " + this.name + ":");
         ArrayList<IDoctor> doctorsByPatientType = getDoctorsByPatientType(patient.getPatientType());
         for(IDoctor doctor:doctorsByPatientType){
             if(doctor.isAvailable()){

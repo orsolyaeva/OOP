@@ -37,11 +37,13 @@ public class Veterinarian extends Person implements IDoctor {
             if(isAvailable()){
                 this.patients.add(patient);
                 if(patient instanceof Pet){
-                    System.out.println(((Pet) patient).getPetName() + " successfully assigned to " + this.fullName + ".");
+                    System.out.println(((Pet) patient).getPetName() + " successfully assigned to Dr. " + this.fullName + ".");
+                    return;
                 }
             }
             else{
                 System.out.println("Can not work with more patients today!\n");
+                return;
             }
         }
     }
