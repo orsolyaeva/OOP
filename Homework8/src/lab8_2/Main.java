@@ -20,22 +20,39 @@ public class Main {
                 service = new DictionaryService(DictionaryType.HASH_SET);
             }
             default -> {
-                System.out.println("The given data structure does not exist!");
+                System.out.println("The given data structure does not exist! Try again!");
                 System.exit(1);
             }
         }
-        
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            System.out.print("Word to find ( Enter <end> for exit): ");
-            String word = scanner.nextLine();
-            if (word.equalsIgnoreCase("end")) {
-                break;
-            }
-            System.out.println(" Find(" + word + "): " + service.findWord(word));
-        }
 
-        ArrayList<String> notInDictionary = service.findWordsFile("Homework8/bible.txt");
-        System.out.println("WORDS FROM THE FILE THAT ARE NOT PRESENT IN THE DICTIONARY:\n" + notInDictionary);
+        while (true) {
+            System.out.print("\n1. Search for a word\n2. Search for all the words of a text file\n3. Exit\n" +
+                    "Enter what you want to do:");
+            int exercise = read.nextInt();
+
+            switch (exercise) {
+                case 1 -> {
+                    Scanner scanner = new Scanner(System.in);
+                    while (true) {
+                        System.out.print("Word to find ( Enter <end> for exit): ");
+                        String word = scanner.nextLine();
+                        if (word.equalsIgnoreCase("end")) {
+                            break;
+                        }
+                        System.out.println(" Find(" + word + "): " + service.findWord(word));
+                    }
+                }
+                case 2 -> {
+                    ArrayList<String> notInDictionary = service.findWordsFile("Homework8/bible.txt");
+                    System.out.println("WORDS FROM THE FILE THAT ARE NOT PRESENT IN THE DICTIONARY:\n" + notInDictionary);
+                }
+                case 3 -> {
+                    System.exit(0);
+                }
+                default -> {
+                    System.out.println("Something went wrong...Please try again!");
+                }
+            }
+        }
     }
 }
