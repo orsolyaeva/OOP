@@ -36,15 +36,14 @@ public class HashSetDictionary implements IDictionary{
 
     @Override
     public boolean add(String s) {
-        if(find(s)){
-            System.out.println("The word is already in the dictionary!");
-            return false;
-        }
-
+        // in case of hash sets you dont have to check if a word is already present or not because duplicate elements are ignore
         words.add(s.toLowerCase());
-        List<String> list = new ArrayList<String>(words);
-        Collections.sort(list);
-        words = (HashSet<String>) list;
+
+        // if you wish you can sort the words in alphabetical order
+//        List<String> list = new ArrayList<String>(words);
+//        Collections.sort(list);
+//        words = (HashSet<String>) list;
+
         return true;
     }
 
