@@ -87,11 +87,17 @@ public class CircularQueue implements IQueue {
        }
 
        int i, j;
+
+       if(items[rear] != temp.items[temp.rear]){
+           return false;
+       }
+
        for(i = front, j = temp.front; i != rear && j != temp.rear; i = (i + 1) % CAPACITY, j = (j + 1) % temp.CAPACITY){
            if(items[i] != temp.items[j]){
                return false;
            }
        }
+
        return true;
     }
 
