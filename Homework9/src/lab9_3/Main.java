@@ -1,9 +1,5 @@
 package lab9_3;
 
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.SortedMap;
-
 public class Main {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
