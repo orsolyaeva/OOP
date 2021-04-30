@@ -9,7 +9,7 @@ public class Main {
 
         System.out.print("Please enter a sentence: ");
         Scanner read = new Scanner(System.in);
-        StringTokenizer tokens = new StringTokenizer(read.nextLine(), ", ");
+        StringTokenizer tokens = new StringTokenizer(read.nextLine(), ",\t ");
 
         while(tokens.hasMoreTokens()){
             String token = tokens.nextToken();

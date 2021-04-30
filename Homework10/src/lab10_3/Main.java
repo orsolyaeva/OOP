@@ -1,7 +1,10 @@
 package lab10_3;
 
-import java.io.File;
 import java.io.IOException;
+
+// <file.txt> - original text file
+// <encode.txt> - encoded file
+// <decode.txt> - decoded file (should be the same as the original)
 
 public class Main implements FileUtil{
     public static void main(String[] args) {

@@ -24,7 +24,7 @@ public class Main {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.out.println(("An error occurred whilst reading the file."));
-            System.exit(2);
+            System.exit(1);
         }
 
         StringTokenizer tokens;
@@ -32,8 +32,9 @@ public class Main {
         while(scanner.hasNextLine()){
             String line = scanner.nextLine();
             tokens = new StringTokenizer(line, ", ");
+
             if(tokens.countTokens() >= 7){
-                while(tokens.hasMoreTokens()){
+                while(tokens.hasMoreTokens()) {
                     String code = tokens.nextToken();
                     String firstName = tokens.nextToken();
                     String lastName = tokens.nextToken();
@@ -41,13 +42,13 @@ public class Main {
 
                     try{
                         credits = Integer.parseInt(tokens.nextToken());
-
                     } catch (NumberFormatException e){
                         System.out.println("NUMBER FORMAT EXCEPTION: " + line);
-                        continue;
+                        break;
                     }
 
                     int birthYear, birthMonth, birthDay;
+
                     try{
                         birthYear = Integer.parseInt(tokens.nextToken());
                         birthMonth = Integer.parseInt(tokens.nextToken());
@@ -55,56 +56,22 @@ public class Main {
 
                     } catch (NumberFormatException e){
                         System.out.println("INVALID DATE: " + line);
-                        continue;
+                        break;
                     }
 
                     if(!DateUtil.isValidDate(birthYear, birthMonth, birthDay)){
                         System.out.println("INVALID DATE: " + line);
-                        continue;
+                        break;
 
                     } else {
                         if(credits < 30){
                             ps.println(line);
                         }
                     }
-
                 }
             } else{
                 System.out.println("INCOMPLETE LINE: " + line);
-                continue;
             }
         }
     }
-
-//
-//    public static ArrayList<Student> readStudents(String filename){
-//        ArrayList<Student> students = new ArrayList<>();
-//        Scanner scanner = null;
-//        try{
-//            scanner = new Scanner(new File(filename));
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//            System.out.println(("An error occurred whilst reading the file."));
-//            System.exit(1);
-//        }
-//
-//        StringTokenizer tokens;
-//
-//        while(scanner.hasNextLine()){
-//            String line = scanner.nextLine();
-//            tokens = new StringTokenizer(line, ", ");
-//
-//            if(tokens.countTokens() == 7){
-//                while(tokens.hasMoreTokens()){
-//                    String code = tokens.nextToken();
-//                    String firstName = tokens.nextToken();
-//                    String lastName = tokens.nextToken();
-//
-//
-//                }
-//            } else{
-//                System.out.println("INCOMPLETE LINE: " + line);
-//            }
-//        }
-//    }
 }
