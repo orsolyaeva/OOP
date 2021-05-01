@@ -6,12 +6,12 @@ This repo contains a separate directory for each of my OOP homework (fundamental
 
 ***Assignments***
 
- - **Class 1** (Feb 15):  [homework](Homework1/src)
- - **Class 2** (Feb 22):  [homework](Homework2)
- - **Class 3** (March 1):  [homework](Homework3/src)
- - **Class 4** (March 8): [homework](Homework4/src)
- - **Class 5** (March 15): [homework](Homework5/src)
- - **Class 6** (March 22): [homework](Homework6/src)
- - **Class 8** (April 12): [homework](Homework8/src)
- - **Class 9** (April 19): [homework](Homework9/src)
+ - **Class 1** (Feb 15):  [homework](Homework01/src)
+ - **Class 2** (Feb 22):  [homework](Homework02)
+ - **Class 3** (March 1):  [homework](Homework03/src)
+ - **Class 4** (March 8): [homework](Homework04/src)
+ - **Class 5** (March 15): [homework](Homework05/src)
+ - **Class 6** (March 22): [homework](Homework06/src)
+ - **Class 8** (April 12): [homework](Homework08/src)
+ - **Class 9** (April 19): [homework](Homework09/src)
  - **Class 10** (April 26): [homework](Homework10/src)
