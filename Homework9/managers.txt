@@ -1,2 +1,0 @@
-Manager{ID=1, firstName='Incze', lastName='Zsolt-Tamas', salary=3100.0, birthDate=2000-9-25department='WebDev'}
-Manager{ID=9, firstName='Burszan', lastName='Hunor', salary=3500.0, birthDate=2000-5-3department='MobileDev'}
