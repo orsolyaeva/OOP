@@ -51,6 +51,13 @@ public class Circuit {
         this.components.remove(component);
     }
 
+    public void removeComponentByIndex(int index){
+        if(!(index >= 0 && index <= components.size() - 1)){
+            return;
+        }
+        this.components.remove(index);
+    }
+
     public int getNumberComponents(){
        return this.components.size();
     }
@@ -85,8 +92,7 @@ public class Circuit {
 
         double resultant = 0;
         for(Components  component : components){
-            Resistance resistance = (Resistance) component;
-            resultant += resistance.getValue();
+           resultant += ((Resistance) component).getValue();
         }
 
         return resultant;
