@@ -13,16 +13,16 @@ public interface IExpression {
 
         StringTokenizer tokens = new StringTokenizer(postFixExpression, " ");
 
-        int item;
+        Double item;
         while(tokens.hasMoreTokens()){
             String token = tokens.nextToken();
 
             if(isOperator(token)){
-                int value1, value2;
+                double value1, value2;
                 try {
-                    value1 = (int) stack.top();
+                    value1 = (double) stack.top();
                     stack.pop();
-                    value2 = (int) stack.top();
+                    value2 = (double) stack.top();
                     stack.pop();
 
                 } catch (StackException e) {
@@ -64,7 +64,7 @@ public interface IExpression {
 
             } else {
                 try{
-                    item = Integer.parseInt(token);
+                    item = Double.parseDouble(token);
                 } catch (NumberFormatException e){
                     throw new ExpressionException("Wrong operand: " + token);
                 }
