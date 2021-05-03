@@ -14,10 +14,7 @@ public class AddToArray implements Runnable{
         Random rand = new Random();
         String characters = "";
         char random_char;
-
-        while(true){
-
-        }
+        
     }
 
 //    private int smallestPosition(String characters){
