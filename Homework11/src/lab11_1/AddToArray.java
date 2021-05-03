@@ -37,6 +37,7 @@ public class AddToArray extends Thread{
         }
         System.out.println("Thread stopped running.");
         this.interrupt();
+        System.exit(0);
     }
 
     private int minimumPosition(String characters){

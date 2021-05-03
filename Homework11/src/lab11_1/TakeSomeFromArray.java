@@ -25,6 +25,7 @@ public class TakeSomeFromArray extends Thread{
         if(AddToArray.countChanges == AddToArray.changeMax){
             System.out.println("Thread stopped running.");
             this.interrupt();
+            System.exit(0);
         }
     }
 
