@@ -13,7 +13,7 @@ public interface IExpression {
 
         StringTokenizer tokens = new StringTokenizer(postFixExpression, " ");
 
-        Double item;
+        double item;
         while(tokens.hasMoreTokens()){
             String token = tokens.nextToken();
 
@@ -26,8 +26,7 @@ public interface IExpression {
                     stack.pop();
 
                 } catch (StackException e) {
-                    e.printStackTrace();
-                    throw new ExpressionException("Wrong postfix expression");
+                    throw new ExpressionException("Wrong postfix expression!");
                 }
 
                 switch (token) {
@@ -35,29 +34,28 @@ public interface IExpression {
                         try {
                             stack.push(value1 + value2);
                         } catch (StackException e) {
-                            e.printStackTrace();
+                           throw new ExpressionException("Wrong postfix expression!");
                         }
                     }
                     case "-" -> {
                         try {
                             stack.push(value1 - value2);
                         } catch (StackException e) {
-                            e.printStackTrace();
+                            throw new ExpressionException("Wrong postfix expression!");
                         }
                     }
                     case "*" -> {
                         try {
                             stack.push(value1 * value2);
                         } catch (StackException e) {
-                            e.printStackTrace();
+                            throw new ExpressionException("Wrong postfix expression!");
                         }
                     }
                     case "/" -> {
                         try {
-                            System.out.println(" / " + value2 / value1);
                             stack.push(value2 / value1);
                         } catch (StackException e) {
-                            e.printStackTrace();
+                            throw new ExpressionException("Wrong postfix expression!");
                         }
                     }
                 }
@@ -72,7 +70,7 @@ public interface IExpression {
                 try {
                     stack.push(item);
                 } catch (StackException e) {
-                    e.printStackTrace();
+                   throw new ExpressionException("This should never happen!\n");
                 }
             }
         }
@@ -81,7 +79,7 @@ public interface IExpression {
         try {
             result = Double.parseDouble(stack.top().toString());
         } catch (StackException e) {
-            e.printStackTrace();
+            throw new ExpressionException("Wrong postfix expression!");
         }
 
         return result;
