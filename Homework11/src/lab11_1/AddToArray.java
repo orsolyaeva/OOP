@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class AddToArray extends Thread{
     private String[] sa_array;
-    public static final int changeMax = 100;
+    public static final int changeMax = 300;
     public static int countChanges = 0;
 
     public AddToArray(String[] sa_array) {
@@ -37,7 +37,7 @@ public class AddToArray extends Thread{
         }
         System.out.println("Thread stopped running.");
         this.interrupt();
-        System.exit(0);
+//        System.exit(0);
     }
 
     private int minimumPosition(String characters){
