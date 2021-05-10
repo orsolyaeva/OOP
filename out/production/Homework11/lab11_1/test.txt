@@ -1,0 +1,307 @@
+Thread-0: yyy
+Thread-2: yyy lll
+Thread-3: yyy lll uuu
+Thread-1: yyy lll uuu ggg
+Thread-0: yyy lll uuu ggg xxx
+Thread-2: yyy lll uuu ggg xxx iii
+Thread-3: yyy lll uuu ggg xxx iii jjj
+Thread-1: yyy lll uuu ggg xxx iii jjj sss
+Thread-3: yyy lll uuu ggg xxx iii jjj sss yyy
+Thread-2: yyy lll uuu ggg xxx iii jjj sss yyy hhh
+Thread-0: eee lll uuu ggg xxx iii jjj sss yyy hhh
+Thread-1: vvv lll uuu ggg xxx iii jjj sss yyy hhh
+Thread-3: fff lll uuu ggg xxx iii jjj sss yyy hhh
+Thread-0: iii lll uuu ggg xxx iii jjj sss yyy hhh
+Thread-2: iii lll uuu ooo xxx iii jjj sss yyy hhh
+String ooo has been replaced with space 1 times.
+Thread-1: iii lll uuu jjj xxx iii jjj sss yyy hhh
+Thread-3: iii lll uuu jjj xxx iii jjj sss yyy qqq
+Thread-0: ooo lll String ooo has been replaced with space 2 times.
+uuu jjj xxx iii jjj sss yyy qqq
+Thread-2: fff lll uuu jjj xxx iii jjj sss yyy qqq
+Thread-1: kkk lll uuu jjj xxx iii jjj sss yyy qqq
+Thread-3: kkk lll uuu jjj xxx xxx jjj sss yyy qqq
+Thread-0: kkk lll uuu mmm xxx xxx jjj sss yyy qqq
+Thread-2: kkk lll uuu mmm xxx xxx nnn sss yyy qqq
+Thread-1: fff lll uuu mmm xxx xxx nnn sss yyy qqq
+Thread-3: ppp lll uuu String ppp has been replaced with space 3 times.
+mmm xxx xxx nnn sss yyy qqq
+Thread-0: zzz lll uuu mmm xxx xxx nnn sss yyy qqq
+String zzz has been replaced with space 4 times.
+Thread-2: xxx lll uuu mmm xxx xxx nnn sss yyy qqq
+Thread-1: xxx xxx uuu mmm xxx xxx nnn sss yyy qqq
+Thread-3: lll xxx uuu mmm xxx xxx nnn sss yyy qqq
+Thread-0: mmm xxx uuu mmm xxx xxx nnn sss yyy qqq
+Thread-2: qqq xxx uuu mmm xxx xxx nnn sss yyy qqq
+Thread-1: qqq xxx uuu xxx xxx xxx nnn sss yyy qqq
+Thread-0: qqq xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-3: ddd xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-2: ccc xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-1: lll xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-0: nnn xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-3: String zzz has been replaced with space 5 times.
+  xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-2: ccc xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-1: aaa xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-0: ccc xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-3: aaa xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-2: String ppp has been replaced with space 6 times.
+ppp xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-1: vvv xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-0: ccc xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-2: ddd xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-3: hhh xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-1: nnn xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-0: iii xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-2: zzz xxx uuu String zzz has been replaced with space 7 times.
+xxx xxx xxx xxx sss yyy qqq
+Thread-3: ttt xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-1: kkk xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-0: ggg xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-2: xxx xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-3: jjj xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-1: eee xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-0: zzz xxx uuu String zzz has been replaced with space 8 times.
+xxx xxx xxx xxx sss yyy qqq
+Thread-3: iii xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-2: bbb xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-1: iii xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-0: uuu xxx uuu xxx xxx xxx xxx sss yyy qqq
+Thread-3: uuu xxx uuu xxx xxx xxx xxx sss yyy yyy
+Thread-2: ddd xxx uuu xxx xxx xxx xxx sss yyy yyy
+Thread-1: mmm xxx uuu xxx xxx xxx xxx sss yyy yyy
+Thread-0: yyy xxx uuu xxx xxx xxx xxx sss yyy yyy
+Thread-3: yyy xxx uuu xxx xxx String zzz has been replaced with space 9 times.
+xxx xxx   yyy yyy
+Thread-2: yyy xxx uuu xxx xxx xxx xxx qqq yyy yyy
+Thread-1: qqq xxx uuu xxx xxx xxx xxx qqq yyy yyy
+Thread-0: iii xxx uuu xxx xxx xxx xxx qqq yyy yyy
+Thread-3: eee xxx uuu xxx xxx xxx xxx qqq yyy yyy
+Thread-2: kkk xxx uuu xxx xxx xxx xxx qqq yyy yyy
+Thread-1: zzz xxx uuu xxx xxx String zzz has been replaced with space 10 times.
+xxx xxx qqq yyy yyy
+String ppp has been replaced 10 times, thread finished its work.
+Thread-0: nnn xxx uuu xxx xxx xxx xxx qqq yyy yyy
+Thread-2: ttt xxx uuu xxx xxx xxx xxx qqq yyy yyy
+Thread-3: jjj xxx uuu xxx xxx xxx xxx qqq yyy yyy
+Thread-1: nnn xxx uuu xxx xxx xxx xxx qqq yyy yyy
+Thread-0: yyy xxx uuu xxx xxx xxx xxx qqq yyy yyy
+Thread-2: yyy xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-3: ooo xxx uuu xxx xxx xxx xxx yyy yyy yyy String ooo has been replaced with space 11 times.
+
+Thread-1: ttt xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-0: eee xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-3: hhh xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-2: String ooo has been replaced with space 12 times.
+ooo xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-1: www xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-0: ddd xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-3: bbb xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-2: xxx xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-1: jjj xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-0: ttt xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-3: uuu xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-2: qqq xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-1: lll xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-0: ooo xxx uuu xxx xxx xxx xxx yyy yyy yyy
+String ooo has been replaced with space 13 times.
+Thread-3: yyy xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-2: kkk xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-1: sss xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-0: nnn xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-3: uuu xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-2: jjj xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-1: fff xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-0: qqq xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-3: jjj xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-2: nnn xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-1: xxx xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-0: ppp xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-3: ddd xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-2: zzz xxx uuu xxx String zzz has been replaced with space 14 times.
+xxx xxx xxx yyy yyy yyy
+Thread-1: eee xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-0: ttt xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-3: bbb xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-2: yyy xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-1: ccc xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-0: ccc xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-3: hhh xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-2: String zzz has been replaced with space 15 times.
+zzz xxx uuu xxx xxx xxx xxx yyy yyy yyy
+String zzz has been replaced 15 times, thread finished its work.
+Thread-1: ggg xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-0: lll xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-3: zzz xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-2: sss xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-1: ccc xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-0: aaa xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-3: ddd xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-2: ggg xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-1: ooo xxx uuu xxx xxx xxx String ooo has been replaced with space 16 times.
+xxx yyy yyy yyy
+Thread-0: yyy xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-3: nnn xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-2: rrr xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-1: hhh xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-0: eee xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-3: zzz xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-2: ppp xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-1: zzz xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-0: jjj xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-3: nnn xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-2: fff xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-1: rrr xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-0: hhh xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-3: aaa xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-2: hhh xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-1: mmm xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-0: rrr xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-3: ttt xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-2: rrr xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-1: hhh xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-0: eee xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-3: lll xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-2: rrr xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-1: qqq xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-0: fff xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-3: iii xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-2: www xxx uuu xxx xxx xxx xxx yyy yyy yyy
+Thread-1: www xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-0: hhh xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-3: sss xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-2: bbb xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-1: rrr xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-0: eee xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-3: xxx xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-2: uuu xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-1: ccc xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-0: ggg xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-3: iii xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-2: fff xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-1: kkk xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-0: ggg xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-3: hhh xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-2: qqq xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-1: jjj xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-0: ttt xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-3: iii xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-2: mmm xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-1: iii xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-0: jjj xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-3: bbb xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-2: xxx xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-1: fff xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-0: xxx xxx www xxx xxx xxx xxx yyy yyy yyy
+Thread-3: xxx xxx yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-1: ccc xxx yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-2: ddd xxx yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-0: iii xxx yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-3: jjj xxx yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-1: ddd xxx yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-2: aaa xxx yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-0: iii xxx yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-3: ddd xxx yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-1: yyy xxx yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-2: yyy yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-0: uuu yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-3: ppp yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-1: jjj yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-2: xxx yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-0: sss yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-3: kkk yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-1: yyy yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-2: jjj yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-0: rrr yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-3: uuu yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-1: kkk yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-2: eee yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-0: ccc yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-3: eee yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-2: aaa yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-1: uuu yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-0: zzz yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-3: ppp yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-2: ttt yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-1: fff yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-0: mmm yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-3: iii yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-2: eee yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-1: zzz yyy yyy xxx xxx xxx xxx yyy yyy yyy
+Thread-0: zzz yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-3: ppp yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-1: xxx yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-2: bbb yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-0: hhh yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-3: qqq yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-2: uuu yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-1: rrr yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-0: ppp yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-3: fff yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-2: aaa yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-1: sss yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-0: xxx yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-3: hhh yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-2: jjj yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-1: rrr yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-0: lll yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-3: xxx yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-2: jjj yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-1: ppp yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-0: ppp yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-3: ddd yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-2: hhh yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-1: sss yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-0: xxx yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-3: xxx yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-2: mmm yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-1: uuu yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-0: ccc yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-3: xxx yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-2: yyy yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-1: kkk yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-0: www yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-3: bbb yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-2: sss yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-1: fff yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-0: bbb yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-3: zzz yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-2: sss yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-1: uuu yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-0: mmm yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-3: uuu yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-2: ooo yyy String ooo has been replaced with space 17 times.
+yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-1: String ooo has been replaced with space 18 times.
+ooo yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-0: www yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-3: yyy yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-2: iii yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-1: uuu yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-0: bbb yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-3: nnn yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-2: ddd yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-1: fff yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-0: hhh yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-3: yyy yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-2: kkk yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-1: xxx yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-0: yyy yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-3: ttt yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-2: ttt yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-1: jjj yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-0: rrr yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-3: ddd yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-2: ooo yyy yyy yyy xxx xxx String ooo has been replaced with space 19 times.
+xxx yyy yyy yyy
+Thread-1: rrr yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-0: xxx yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-3: ooo yyy yyy yyy xxx xxx xxx String ooo has been replaced with space 20 times.
+yyy yyy yyy
+Thread-2: nnn yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread-1: jjj yyy yyy yyy xxx xxx xxx yyy yyy yyy
+Thread stopped running.
+Thread stopped running.
+Thread stopped running.
+Thread stopped running.
+Thread stopped running.

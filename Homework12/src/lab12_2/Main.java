@@ -1,11 +1,11 @@
-package lab9_3;
+package lab12_2;
 
 public class Main {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
 
-        Storage storage = new Storage("Homework09/data1000000.txt");
-        storage.update("Homework09/update1000000.txt");
+        Storage storage = new Storage("Homework12/data1000000.txt");
+        storage.update("Homework12/update1000000.txt");
 
         long endTime = System.currentTimeMillis();
 
