@@ -5,22 +5,21 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 public class HashSetDictionary implements IDictionary{
-    private HashSet<String> words = new HashSet<>();
+    private Set<String> words = new HashSet<>();
     private static HashSetDictionary instance = null;
 
     private HashSetDictionary(){
-        Scanner scanner = null;
-        try {
-            scanner = new Scanner(new File(DICTIONARY_FILE));
+        try (Scanner scanner = new Scanner(new File(DICTIONARY_FILE))){
+
+            while(scanner.hasNextLine()){
+                String line = scanner.nextLine();
+                words.add(line);
+            }
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.out.println("File not found: " + DICTIONARY_FILE);
             System.exit(1);
-        }
-
-        while(scanner.hasNextLine()){
-            String line = scanner.nextLine();
-            words.add(line);
         }
     }
 

@@ -2,10 +2,7 @@ package lab12_3;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Baccalaureate {
     private Map<Integer, Student> students = new HashMap<>();
@@ -55,7 +52,7 @@ public class Baccalaureate {
     }
 
     public void computeAverage(){
-        for(Map.Entry<Integer, Student> student : students.entrySet()){
+        for(Map.Entry<Integer, Student> student : students.entrySet()) {
             student.getValue().setAverage();
         }
     }
@@ -72,11 +69,19 @@ public class Baccalaureate {
     }
 
     public void listFailedStudent(){
+        ArrayList<Student> failedStudents = new ArrayList<>();
+
         System.out.println("List of students who failed the exam: ");
         for(Map.Entry<Integer, Student> student : students.entrySet()){
             if(!student.getValue().isPassed()){
-                System.out.println(student);
+                failedStudents.add(student.getValue());
             }
+        }
+
+        failedStudents.sort((o1, o2) -> o1.getFullName().compareToIgnoreCase(o2.getFullName()));
+
+        for(Student student : failedStudents){
+            System.out.println(student);
         }
     }
 

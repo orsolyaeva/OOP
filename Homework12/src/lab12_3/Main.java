@@ -1,7 +1,5 @@
 package lab12_3;
 
-// use HashMap
-
 public class Main {
     public static void main(String[] args) {
         Baccalaureate baccalaureate = new Baccalaureate("Homework12/nevek1.txt");

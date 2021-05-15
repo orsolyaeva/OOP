@@ -3,25 +3,25 @@ package lab12_1;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.TreeSet;
 
 public class TreeSetDictionary implements IDictionary{
-    private TreeSet<String> words = new TreeSet<>();
+    private Set<String> words = new TreeSet<>();
     private static TreeSetDictionary instance = null;
 
     private TreeSetDictionary(){
-        Scanner scanner = null;
-        try{
-            scanner = new Scanner(new File(DICTIONARY_FILE));
+        try(Scanner scanner = new Scanner(new File(DICTIONARY_FILE))){
+
+            while(scanner.hasNextLine()){
+                String line = scanner.nextLine();
+                words.add(line);
+            }
+
         }catch(FileNotFoundException e){
             e.printStackTrace();
             System.out.println("File not found: " + DICTIONARY_FILE);
             System.exit(1);
-        }
-
-        while(scanner.hasNextLine()){
-            String line = scanner.nextLine();
-            words.add(line);
         }
     }
 
