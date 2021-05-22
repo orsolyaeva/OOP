@@ -15,8 +15,9 @@ public class AlertHelper {
     public static void showAlert(Alert.AlertType alertType, String title, String message, Registration registration){
         ButtonType cancelButton = new ButtonType("Finish game");
         ButtonType playAgainButton = new ButtonType("Play again");
+        ButtonType checkScoreButton = new ButtonType("Check Score");
 
-        Alert alert = new Alert(alertType, title, cancelButton, playAgainButton);
+        Alert alert = new Alert(alertType, title, playAgainButton, checkScoreButton, cancelButton);
         alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(message);
@@ -24,17 +25,22 @@ public class AlertHelper {
         alert.getDialogPane().requestFocus();
 
         alert.getButtonTypes().clear();
-        alert.getButtonTypes().addAll(cancelButton, playAgainButton);
+        alert.getButtonTypes().addAll(playAgainButton, checkScoreButton, cancelButton);
         
         Optional<ButtonType> option = alert.showAndWait();
 
         if(option.isPresent() && option.get() == cancelButton){
             endGameAlert(alertType, new String[]{registration.getPlayer1Name(), registration.getPlayer1Score().toString(),
-                    registration.getPlayer2Name(),  registration.getPlayer2Score().toString()});
+                    registration.getPlayer2Name(),  registration.getPlayer2Score().toString()}, true);
+        }
+
+        else if(option.isPresent() && option.get() == checkScoreButton){
+            endGameAlert(alertType, new String[]{registration.getPlayer1Name(), registration.getPlayer1Score().toString(),
+                    registration.getPlayer2Name(),  registration.getPlayer2Score().toString()}, false);
         }
     }
 
-    public static void endGameAlert(Alert.AlertType alertType, String[] players){
+    public static void endGameAlert(Alert.AlertType alertType, String[] players, boolean endGameType){
         ButtonType cancelButton = new ButtonType("Cancel");
 
         Font headerFont = Font.font("Arial", FontWeight.BOLD, FontPosture.REGULAR, 12);
@@ -103,7 +109,7 @@ public class AlertHelper {
 
         Optional<ButtonType> option = alert.showAndWait();
 
-        if(option.isPresent() && option.get() == cancelButton){
+        if(endGameType && option.isPresent() && option.get() == cancelButton){
             System.exit(0);
         }
     }
