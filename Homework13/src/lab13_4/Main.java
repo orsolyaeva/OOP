@@ -59,18 +59,23 @@ public class Main extends Application {
                         }
 
                         if (board.checkState()) {
+
+                            switch (String.valueOf(turn)){
+                                case "true" -> registration.getPlayer2Score().incrementAndGet();
+                                case "false"-> registration.getPlayer1Score().incrementAndGet();
+                            }
+
                             lab13_4.model.AlertHelper.showAlert(Alert.AlertType.INFORMATION, "Game over",
                                     ((!turn) ? registration.getPlayer1Name() : registration.getPlayer2Name())
-                                            + " is the winner!");
+                                            + " is the winner!", registration);
 
                             try {
                                 start(primaryStage);
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
-
                         } else if (counter.get() == size * size && !board.checkState()) {
-                            lab13_4.model.AlertHelper.showAlert(Alert.AlertType.INFORMATION, "Game over", "Nobody won!");
+                            lab13_4.model.AlertHelper.showAlert(Alert.AlertType.INFORMATION, "Game over", "Nobody won!", registration);
 
                             try {
                                 start(primaryStage);

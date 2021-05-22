@@ -15,13 +15,19 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 
 public class Registration {
     private String player1Name, player2Name, player1Symbol, player2Symbol;
+    private AtomicInteger player1Score, player2Score;
 
     public GridPane createGridPane(Scene scene, Stage primaryStage){
         Text player1Text = new Text("Player 1");
         Text player2Text = new Text("Player 2");
+
+        player1Score = new AtomicInteger();
+        player2Score = new AtomicInteger();
 
         player1Text.setFont(Font.font("Arial", FontWeight.BOLD, FontPosture.REGULAR, 12));
         player2Text.setFont(Font.font("Arial", FontWeight.BOLD, FontPosture.REGULAR, 12));
@@ -122,5 +128,13 @@ public class Registration {
 
     public String getPlayer2Symbol() {
         return player2Symbol;
+    }
+
+    public AtomicInteger getPlayer1Score() {
+        return player1Score;
+    }
+
+    public AtomicInteger getPlayer2Score() {
+        return player2Score;
     }
 }
